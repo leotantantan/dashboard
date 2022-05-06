@@ -1,0 +1,1831 @@
+
+
+    #############################################################################################################################################
+    #                                                                                                                                           #
+    #                                                               家庭平面图                                                                    #
+    #                                                                                                                                           #
+    #############################################################################################################################################
+kiosk_mode:
+  hide_header: true
+  hide_sidebar: true
+views:
+  - theme: Backend-selected
+    title: Plan
+    path: plan
+    icon: mdi:floor-plan
+    type: panel
+    badges: []
+    cards:
+      - type: custom:config-template-card
+        entities:
+          - switch.toilet02
+          - switch.master_l1
+          - switch.robe
+          - switch.study_l1
+          - switch.kids_l1
+          - switch.backyard_left
+          - switch.backyard_right
+          - switch.hallway_l1
+          - switch.hallway_l2
+          - switch.garage_switch_left
+          - switch.living_switch_l1
+          - switch.living_switch_l2
+          - switch.pantry
+          - switch.laundry
+          - switch.kitchen_03
+          - switch.kitchen_02
+          - switch.vacuum
+          - switch.garage_socket_switch
+          - light.yeelink_strip_study
+          - light.yeelink_lamp_study
+          - light.yeelightledlightstrip1s_5d5c
+          - light.lamp_amy
+          - light.lamp_leo
+
+          - cover.garage_door
+          - humidifier.deerma_mjjsq_c355_humidifier
+          - cover.switchbot_curtain
+
+          - binary_sensor.toilet01
+          - binary_sensor.toilet02
+          - binary_sensor.toilet02_contact
+          - binary_sensor.living_occupancy
+          - binary_sensor.laundry_occupancy
+          - binary_sensor.robe_occupancy
+          - binary_sensor.close2living
+          - binary_sensor.close2door
+          - binary_sensor.garagedoor_contact
+          - binary_sensor.pantry
+          - binary_sensor.study_occupancy
+          - binary_sensor.backdoor_contact
+          - binary_sensor.frontdoor_contact
+          - binary_sensor.mail_contact
+          - binary_sensor.porch_occupancy
+        card:
+          type: picture-elements
+          image: /local/ui/家庭总览_empty.png
+          elements:
+            - type: image
+              entity: switch.toilet02
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.1%
+                left: 58.3%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/客卫.png
+            - type: image
+              entity: switch.toilet02
+              tap_action:
+                action: toggle
+              style:
+                top: 64%
+                left: 63.5%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+            - type: image
+              entity: switch.pantry
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.2%
+                left: 58.3%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/储物间.png
+            - type: image
+              entity: switch.pantry
+              tap_action:
+                action: toggle
+              style:
+                top: 64%
+                left: 67%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+            - type: image
+              entity: switch.kitchen_03
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.2%
+                left: 58.05%
+                width: 97%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/厨房L1.png
+            - type: image
+              entity: switch.kitchen_03
+              tap_action:
+                action: toggle
+              style:
+                top: 67%
+                left: 73%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+            - type: image
+              entity: switch.kitchen_02
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.2%
+                left: 58.2%
+                width: 97%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/厨房L2.png
+            - type: image
+              entity: switch.kitchen_02
+              tap_action:
+                action: toggle
+              style:
+                top: 61%
+                left: 71%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+            - type: image
+              entity: switch.living_switch_l2
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.3%
+                left: 58.1%
+                width: 97%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/客厅L2.png
+            - type: image
+              entity: switch.living_switch_l2
+              tap_action:
+                action: toggle
+              style:
+                top: 55%
+                left: 78%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+            - type: image
+              entity: switch.living_switch_l1
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.3%
+                left: 58.1%
+                width: 97%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/客厅L1.png
+            - type: image
+              entity: switch.living_switch_l1
+              tap_action:
+                action: toggle
+              style:
+                top: 45%
+                left: 78%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+            - type: image
+              entity: switch.backyard_left
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.3%
+                left: 58.1%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/后院.png
+            - type: image
+              entity: switch.backyard_left
+              tap_action:
+                action: toggle
+              style:
+                top: 50%
+                left: 90%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+
+            - type: image
+              entity: binary_sensor.backdoor_contact
+              tap_action: none
+              style:
+                top: 57%
+                left: 86%
+                width: 3%
+              state_image:
+                'off': /local/ui/door_off.png
+                'on': /local/ui/door_on.png
+
+            - type: image
+              entity: switch.study_l1
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.4%
+                left: 58.4%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/书房.png
+            - type: image
+              entity: switch.study_l1
+              tap_action:
+                action: toggle
+              style:
+                top: 43%
+                left: 67%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+            - type: image
+              entity: switch.kids_l1
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.4%
+                left: 58.4%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/儿童房.png
+            - type: image
+              entity: switch.kids_l1
+              tap_action:
+                action: toggle
+              style:
+                top: 43%
+                left: 56%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+            - type: image
+              entity: switch.robe
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.4%
+                left: 58.4%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/衣帽间.png
+            - type: image
+              entity: switch.robe
+              tap_action:
+                action: toggle
+              style:
+                top: 38%
+                left: 41%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+            - type: image
+              entity: switch.master_l1
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.5%
+                left: 58.6%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/主卧.png
+            - type: image
+              entity: switch.master_l1
+              tap_action:
+                action: toggle
+              style:
+                top: 42%
+                left: 31%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+
+
+            - type: image
+              entity: humidifier.deerma_mjjsq_c355_humidifier
+              tap_action:
+                action: toggle
+              style:
+                top: 50%
+                left: 31%
+                width: 3%
+              state_image:
+                'off': /local/ui/humudifier_off.png
+                'on': /local/ui/humudifier_on.png
+
+            - type: image
+              entity: cover.switchbot_curtain
+              tap_action: 
+                action: call-service
+                service: cover.close_cover
+                service_data:
+                  entity_id: cover.switchbot_curtain
+              hold_action:
+                action: call-service
+                service: cover.open_cover
+                service_data:
+                  entity_id: cover.switchbot_curtain
+              style:
+                top: 43%
+                left: 24%
+                width: 5%
+              state_image:
+                'closed': /local/ui/curtain_off.png
+                'open': /local/ui/curtain_on.png
+
+            - type: image
+              entity: light.lamp_leo
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.5%
+                left: 58.6%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/床头灯_leo.png
+            - type: image
+              entity: light.lamp_leo
+              tap_action:
+                action: toggle
+              style:
+                top: 35%
+                left: 26%
+                width: 3%
+              state_image:
+                'off': /local/ui/bedlamp_off.png
+                'on': /local/ui/bedlamp_on.png
+
+            - type: image
+              entity: light.lamp_amy
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.5%
+                left: 58.6%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/床头灯_amy.png
+            - type: image
+              entity: light.lamp_amy
+              tap_action:
+                action: toggle
+              style:
+                top: 35%
+                left: 35%
+                width: 3%
+              state_image:
+                'off': /local/ui/bedlamp_off.png
+                'on': /local/ui/bedlamp_on.png
+
+            - type: image
+              entity: light.yeelightledlightstrip1s_5d5c
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.5%
+                left: 58.6%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/主卫氛围灯.png
+            - type: image
+              entity: light.yeelightledlightstrip1s_5d5c
+              tap_action:
+                action: toggle
+              style:
+                top: 47.5%
+                left: 49%
+                width: 3%
+              state_image:
+                'off': /local/ui/strip_off.png
+                'on': /local/ui/strip_on.png
+
+            - type: image
+              entity: cover.garage_door
+              tap_action: none
+              hold_action:
+                action: call-service
+                service: cover.close_cover
+                service_data:
+                  entity_id: cover.garage_door
+              style:
+                top: 67%
+                left: 28%
+                width: 5%
+              state_image:
+                'closed': /local/ui/garage_off_0.png
+                'open': /local/ui/garage_on_0.png
+
+            - type: image
+              entity: binary_sensor.garagedoor_contact
+              tap_action: none
+              style:
+                top: 67%
+                left: 28%
+                width: 5%
+              state_image:
+                'off': /local/ui/garage_off.png
+                'on': /local/ui/garage_on.png
+
+            - type: image
+              entity: switch.garage_switch_left
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.2%
+                left: 58.5%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/车库.png
+            - type: image
+              entity: switch.garage_switch_left
+              tap_action:
+                action: toggle
+              style:
+                top: 66%
+                left: 42%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+            - type: image
+              entity: switch.hallway_l1
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.3%
+                left: 58.1%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/过道.png
+            - type: image
+              entity: switch.hallway_l1
+              tap_action:
+                action: toggle
+              style:
+                top: 54.5%
+                left: 56%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+
+            - type: image
+              entity: switch.laundry
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.2%
+                left: 58.4%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/洗衣房.png
+            - type: image
+              entity: switch.laundry
+              tap_action:
+                action: toggle
+              style:
+                top: 63%
+                left: 51%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+
+            - type: image
+              entity: switch.hallway_l2
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.2%
+                left: 58.8%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/门廊.png
+            - type: image
+              entity: switch.hallway_l2
+              tap_action:
+                action: toggle
+              style:
+                top: 55%
+                left: 26%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+
+            - type: image
+              entity: binary_sensor.mail_contact
+              tap_action: none
+              style:
+                top: 90%
+                left: 22%
+                width: 7%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/mail_on.png
+
+            - type: image
+              entity: binary_sensor.frontdoor_contact
+              tap_action: none
+              style:
+                top: 54.5%
+                left: 34%
+                width: 3%
+              state_image:
+                'off': /local/ui/door_off.png
+                'on': /local/ui/door_on.png
+            - type: image
+              entity: switch.backyard_right
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.2%
+                left: 58.8%
+                width: 97%
+                mix-blend-mode: lighten
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/室外走道_S.png
+            - type: image
+              entity: switch.backyard_right
+              tap_action:
+                action: toggle
+              style:
+                top: 29.5%
+                left: 60%
+                width: 3%
+              state_image:
+                'off': /local/ui/light_off.png
+                'on': /local/ui/light_on.png
+
+
+            - type: image
+              entity: light.yeelink_lamp_study
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.2%
+                left: 58.5%
+                width: 97%
+                mix-blend-mode: lighten
+                opacity: 100%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/书房台灯.png
+            - type: image
+              entity: light.yeelink_lamp_study
+              tap_action:
+                action: toggle
+              style:
+                top: 40%
+                left: 69.5%
+                width: 3%
+              state_image:
+                'off': /local/ui/lamp_off.png
+                'on': /local/ui/lamp_on.png
+
+            - type: image
+              entity: light.yeelink_strip_study
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 51.2%
+                left: 58.2%
+                width: 97%
+                mix-blend-mode: lighten
+                opacity: 90%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/书房灯带1.png
+            - type: image
+              entity: light.yeelink_strip_study
+              tap_action:
+                action: toggle
+              style:
+                top: 49%
+                left: 70%
+                width: 3%
+              state_image:
+                'off': /local/ui/strip_off.png
+                'on': /local/ui/strip_on.png
+
+    #############################################################################################################################################
+    #                                                                                                                                           #
+    #                                                               感应状态                                                                    #
+    #                                                                                                                                           #
+    #############################################################################################################################################
+
+
+
+
+            - type: image
+              entity: binary_sensor.toilet02
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 50.45%
+                left: 50.35%
+                width: 97%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/客卫感应1.png
+            - type: image
+              entity: binary_sensor.pantry
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 50.4%
+                left: 50.5%
+                width: 97%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/储物间感应1.png
+
+
+            - type: image
+              entity: binary_sensor.living_occupancy
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 50.1%
+                left: 50.7%
+                width: 97%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/客厅感应1.png
+
+            - type: image
+              entity: binary_sensor.close2door
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 50.1%
+                left: 49.9%
+                width: 97%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/走道感应1.png
+
+            - type: image
+              entity: binary_sensor.close2living
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 50.2%
+                left: 50.5%
+                width: 97%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/走道感应21.png
+ 
+            - type: image
+              entity: binary_sensor.study_occupancy
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 49.8%
+                left: 50.4%
+                width: 97%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/书房感应1.png
+
+            - type: image
+              entity: binary_sensor.robe_occupancy
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 49.6%
+                left: 49.9%
+                width: 97%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/衣帽间感应1.png
+ 
+            - type: image
+              entity: binary_sensor.toilet01
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 49.8%
+                left: 50%
+                width: 97%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/主卫感应1.png
+ 
+
+ 
+            - type: image
+              entity: binary_sensor.porch_occupancy
+              tap_action:
+                action: none
+              style:
+                pointer-events: none
+                top: 50%
+                left: 49.5%
+                width: 97%
+              state_image:
+                'off': /local/ui/transparent.png
+                'on': /local/ui/门廊感应1.png
+
+
+    #############################################################################################################################################
+    #                                                                                                                                           #
+    #                                                               家庭平面图-侧边栏元素                                                          #
+    #                                                                                                                                           #
+    #############################################################################################################################################
+
+
+            - action: none
+              entity: person.leo
+              state_image:
+                home: /local/ui/person/在家.png
+                not_home: /local/ui/person/不在家.png
+                Work: /local/ui/person/在工作.png
+              style:
+                background-color: rgba(255, 255, 255, 0.0)
+                border-radius: 55%
+                height: 9.8%
+                left: 5.45%
+                top: 91.9%
+                width: 5.8%
+              tap_action: none
+              type: image
+
+            - action: none
+              entity: person.amy
+              state_image:
+                home: /local/ui/person/在家_amy.png
+                not_home: /local/ui/person/不在家_amy.png
+              style:
+                background-color: rgba(255, 255, 255, 0.0)
+                border-radius: 55%
+                border-width: 20%
+                border-color: rgb(138, 138, 138)
+                height: 9.8%
+                left: 12.45%
+                top: 91.9%
+                width: 5.8%
+              tap_action: none
+              type: image
+
+            - action: none
+              image: /local/ui/按钮/家庭总览_bt_on.png
+              style:
+                left: 8.8%
+                top: 30.6%
+                width: 14.9%
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace-floor/plan
+              hold_action:
+                action: none
+              type: image
+            - action: none
+              image: /local/ui/按钮/灯光控制_bt_off.png
+              style:
+                left: 8.8%
+                top: 37.6%
+                width: 14.9%
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace-floor/light
+              hold_action:
+                action: none
+              type: image
+            - action: none
+              image: /local/ui/按钮/扫地机_bt_off.png
+              style:
+                left: 8.8%
+                top: 44.6%
+                width: 14.9%
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace-floor/robot
+              hold_action:
+                action: none
+              type: image
+
+
+
+            - color_thresholds:
+                - color: '#4dd2ff'
+                  value: 17
+                - color: '#01a4db'
+                  value: 20
+                - color: '#fccd68'
+                  value: 23
+                - color: '#fd8524'
+                  value: 26
+                - color: '#ff1a1a'
+                  value: 30
+              entities:
+                - sensor.living_binary_temperature
+                - sensor.airhumidifier_temperature
+              icon: mdi:home-thermometer-outline
+              update_interval: 600
+              show:
+                icon: true
+                legend: false
+                name: false
+              style: |
+                :host {
+                 left: 8.6%;
+                 top:  74%;
+                 width: 17.5%;
+                 overflow: hidden;
+                 height: 15%;
+                 background: none  !important;
+                 box-shadow: none !important;
+                }
+                .header {
+                 font-size: 10%;
+                 position: absolute !important;
+                 width: 5% !important;
+                 padding: 0 !important;
+                 right: 20% !important;
+                 top: 15% !important;
+                }
+                ha-card {
+                 background: none  !important;
+                 padding: 0 !important;
+                }
+                .icon > ha-icon {
+                 width:10% !important;
+                 height:10% !important;
+                }
+                .state__time{
+                 font-size:0.9vw !important;
+                 margin-top: 0.2vw;
+                 font-weight: 300 !important;
+                 opacity: 0.4 !important;
+                }
+                .states {
+                 font-size: 100% !important;
+                 padding: 1vw 0vw 0vw 0vw  !important;
+                 margin: auto !important;
+                 width: 68%;
+                }
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace-floor/weather
+              type: custom:mini-graph-card
+
+
+            - backdrop: false
+              entity: weather.adelaide
+              name: ' '
+              style: |
+                :host {
+                left: 8.4%;
+                top:  20.5%;
+                width: 13%;
+                height: 6% !important;
+                overflow: hidden;
+                height: 11%;
+                background: none  !important;
+                box-shadow: none !important;
+                font-size: 100% !important;
+                }
+                ha-card {
+                background: none  !important;
+                box-shadow: none !important;
+                flex-flow: row-reverse !important;
+                padding: 0 !important;
+                }
+                .weather__info--add{
+                display : none !important;
+                }
+                .weather__info{
+                flex-grow: 1;
+                min-height: 0 !important;
+                height: 5%;
+                margin-left: 2%;
+                }
+                .weather__icon{
+                margin-right:0.5% !important;
+                margin-top: -3%;
+                width: 2vw !important;
+                height: 2vw !important;
+                flex: 0 0 2vw !important;
+                }
+              tap_action:
+                action: navigate
+                navigation_path: /lovelace-floor/weather
+              type: custom:simple-weather-card
+            - entity: sensor.time
+              hold_action:
+                action: none
+              style:
+                color: rgba(255, 255, 255, 0.7)
+                font-size: 400%
+                font-weight: 400
+                left: 1.5%
+                letter-spacing: '-0.05vw'
+                max-width: 1px
+                top: 8%
+              tap_action:
+                action: none
+              type: state-label
+              
+            - entity: sensor.date_string
+              hold_action:
+                action: none
+              style:
+                color: rgba(255, 255, 255, 0.3)
+                font-size: 1.3vw
+                font-weight: 300
+                left: 16.9%
+                letter-spacing: 0.05vw
+                text-align: left
+                top: 14%
+                width: 30%
+              tap_action:
+                action: none
+              type: state-label
+    #############################################################################################################################################
+    #                                                                                                                                           #
+    #                                                              灯光控制                                                                      #
+    #                                                                                                                                           #
+    #############################################################################################################################################
+  - theme: Backend-selected
+    title: 所有设备
+    path: light
+    icon: mdi:cellphone-link
+    type: panel
+    badges: []
+    cards:
+      - type: picture-elements
+        image: /local/ui/侧边栏背景.png
+        elements:
+          - enableColumns: true
+            rows:
+              - columns:
+                  - column: 1
+                    entities:
+                      - entities:
+                          - entity: switch.living_switch_l2
+                            icon: mdi:ceiling-light
+                          - entity: switch.living_switch_l1
+                            icon: mdi:sofa
+                          - entity: switch.kitchen_02
+                            icon: mdi:countertop
+                          - entity: switch.kitchen_03
+                            icon: mdi:gas-burner
+                          - entity: switch.pantry
+                            icon: mdi:storefront
+                        title: 客厅
+                    tileOnRow: 5
+                  - column: 1
+                    entities:
+                      - entities:
+                          - entity: switch.toilet02
+                            icon: mdi:ceiling-light
+                        title: 客卫
+                    tileOnRow: 1
+                  - column: 1
+                    entities:
+                      - entities:
+                          - entity: switch.master_l1
+                            icon: mdi:ceiling-light
+                          - entity: light.lamp_leo
+                            icon: mdi:lamp
+                          - entity: light.lamp_amy
+                            icon: mdi:lamp
+                          - entity: light.yeelightledlightstrip1s_5d5c
+                            icon: mdi:led-strip-variant
+                          - entity: switch.robe
+                            icon: mdi:wardrobe
+                        title: 卧室
+                    tileOnRow: 5
+                  - column: 1
+                    entities:
+                      - entities:
+                          - entity: switch.hallway_l1
+                            icon: mdi:ceiling-light
+                          - entity: switch.hallway_l2
+                            icon: mdi:ceiling-light
+                        title: 走道
+                    tileOnRow: 2
+                  - column: 1
+                    entities:
+                      - entities:
+                          - entity: switch.kids_l1
+                            icon: mdi:ceiling-light
+                        title: 儿童房
+                    tileOnRow: 1
+                  - column: 1
+                    entities:
+                      - entities:
+                          - entity: switch.laundry
+                            icon: mdi:ceiling-light
+                        title: 洗衣房
+                    tileOnRow: 1
+                  - column: 1
+                    entities:
+                      - entities:
+                          - entity: switch.study_l1
+                            icon: mdi:ceiling-light
+                          - entity: light.yeelink_lamp_study
+                            icon: mdi:desk-lamp
+                          - entity: light.yeelink_strip_study
+                            icon: mdi:led-strip-variant
+                        title: 书房
+                    tileOnRow: 3
+
+
+                  - column: 1
+                    entities:
+                      - entities:
+                          - entity: switch.backyard_left
+                            icon: mdi:ceiling-light
+                          - entity: switch.backyard_right
+                            icon: mdi:ceiling-light
+                        title: 后院
+                    tileOnRow: 2
+                row: 4
+            statePositionTop: true
+            style:
+              height: 100%
+              left: 60%
+              top: 50%
+              width: 85%
+            type: custom:homekit-card
+    #############################################################################################################################################
+    #                                                                                                                                           #
+    #                                                               所有设备-侧边栏元素                                                            #
+    #                                                                                                                                           #
+    #############################################################################################################################################
+          - action: none
+            image: /local/ui/按钮/家庭总览_bt_off.png
+            style:
+              left: 8.8%
+              top: 30.6%
+              width: 14.9%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/plan
+            hold_action:
+              action: none
+            type: image
+          - action: none
+            image: /local/ui/按钮/灯光控制_bt_on.png
+            style:
+              left: 8.8%
+              top: 37.6%
+              width: 14.9%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/light
+            hold_action:
+              action: none
+            type: image
+          - action: none
+            image: /local/ui/按钮/扫地机_bt_off.png
+            style:
+              left: 8.8%
+              top: 44.6%
+              width: 14.9%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/robot
+            hold_action:
+              action: none
+            type: image
+
+          - action: none
+            entity: person.leo
+            state_image:
+              home: /local/ui/person/在家.png
+              not_home: /local/ui/person/不在家.png
+            style:
+              background-color: rgba(255, 255, 255, 0.0)
+              border-radius: 55%
+              height: 9.8%
+              left: 5.45%
+              top: 91.9%
+              width: 5.8%
+            tap_action: none
+            type: image
+          - action: none
+            entity: person.amy
+            state_image:
+              home: /local/ui/person/在家_amy.png
+              not_home: /local/ui/person/不在家_amy.png
+            style:
+              background-color: rgba(255, 255, 255, 0.0)
+              border-radius: 55%
+              border-width: 20%
+              border-color: rgb(138, 138, 138)
+              height: 9.8%
+              left: 12.45%
+              top: 91.9%
+              width: 5.8%
+            tap_action: none
+            type: image
+          - color_thresholds:
+              - color: '#4dd2ff'
+                value: 17
+              - color: '#01a4db'
+                value: 20
+              - color: '#fccd68'
+                value: 23
+              - color: '#fd8524'
+                value: 26
+              - color: '#ff1a1a'
+                value: 30
+            entities:
+              - sensor.living_binary_temperature
+              - sensor.airhumidifier_temperature
+            icon: mdi:home-thermometer-outline
+            update_interval: 600
+            show:
+              icon: true
+              legend: false
+              name: false
+            style: |
+              :host {
+               left: 8.6%;
+               top:  74%;
+               width: 17.5%;
+               overflow: hidden;
+               height: 15%;
+               background: none  !important;
+               box-shadow: none !important;
+              }
+              .header {
+               font-size: 10%;
+               position: absolute !important;
+               width: 5% !important;
+               padding: 0 !important;
+               right: 20% !important;
+               top: 15% !important;
+              }
+              ha-card {
+               background: none  !important;
+               padding: 0 !important;
+              }
+              .icon > ha-icon {
+               width:10% !important;
+               height:10% !important;
+              }
+              .state__time{
+               font-size:0.9vw !important;
+               margin-top: 0.2vw;
+               font-weight: 300 !important;
+               opacity: 0.4 !important;
+              }
+              .states {
+               font-size: 100% !important;
+               padding: 1vw 0vw 0vw 0vw  !important;
+               margin: auto !important;
+               width: 68%;
+              }
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/weather
+            type: custom:mini-graph-card
+          - backdrop: false
+            entity: weather.adelaide
+            name: ' '
+            style: |
+              :host {
+              left: 8.4%;
+              top:  20.5%;
+              width: 13%;
+              height: 6% !important;
+              overflow: hidden;
+              height: 11%;
+              background: none  !important;
+              box-shadow: none !important;
+              font-size: 100% !important;
+              }
+              ha-card {
+              background: none  !important;
+              box-shadow: none !important;
+              flex-flow: row-reverse !important;
+              padding: 0 !important;
+              }
+              .weather__info--add{
+              display : none !important;
+              }
+              .weather__info{
+              flex-grow: 1;
+              min-height: 0 !important;
+              height: 5%;
+              margin-left: 2%;
+              }
+              .weather__icon{
+              margin-right:0.5% !important;
+              margin-top: -3%;
+              width: 2vw !important;
+              height: 2vw !important;
+              flex: 0 0 2vw !important;
+              }
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/weather
+            type: custom:simple-weather-card
+          - entity: sensor.time
+            hold_action:
+              action: none
+            style:
+              color: rgba(255, 255, 255, 0.7)
+              font-size: 400%
+              font-weight: 400
+              left: 1.5%
+              letter-spacing: '-0.05vw'
+              max-width: 1px
+              top: 8%
+            tap_action:
+              action: none
+            type: state-label
+          - entity: sensor.date_string
+            hold_action:
+              action: none
+            style:
+              color: rgba(255, 255, 255, 0.3)
+              font-size: 1.3vw
+              font-weight: 300
+              left: 16.9%
+              letter-spacing: 0.05vw
+              text-align: left
+              top: 14%
+              width: 30%
+            tap_action:
+              action: none
+            type: state-label
+    #############################################################################################################################################
+    #                                                                                                                                           #
+    #                                                               扫地机                                                                       #
+    #                                                                                                                                           #
+    #############################################################################################################################################
+  - theme: Backend-selected
+    title: 扫地机
+    path: robot
+    icon: mdi:robot-vacuum
+    type: panel
+    badges: []
+    cards:
+      - type: picture-elements
+        image: /local/ui/侧边栏背景.png
+        elements:
+
+          - type: custom:xiaomi-vacuum-map-card
+            entity: vacuum.roborock_vacuum_t6
+            map_source:
+              camera: camera.xiaomi_cloud_map_extractor
+            calibration_source:
+              camera: true
+            language: zh
+
+            style: |
+              :host {
+                left: 58.5%;
+                top:  50%;
+                width: 50%;
+                overflow: hidden;
+                height: 100%;
+                background: none !important;
+                box-shadow: none !important;
+
+    #############################################################################################################################################
+    #                                                                                                                                           #
+    #                                                               扫地机-侧边栏元素                                                             #
+    #                                                                                                                                           #
+    #############################################################################################################################################
+          - action: none
+            image: /local/ui/按钮/家庭总览_bt_off.png
+            style:
+              left: 8.8%
+              top: 30.6%
+              width: 14.9%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/plan
+            hold_action:
+              action: none
+            type: image
+          - action: none
+            image: /local/ui/按钮/灯光控制_bt_off.png
+            style:
+              left: 8.8%
+              top: 37.6%
+              width: 14.9%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/light
+            hold_action:
+              action: none
+            type: image
+          - action: none
+            image: /local/ui/按钮/扫地机_bt_on.png
+            style:
+              left: 8.8%
+              top: 44.6%
+              width: 14.9%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/robot
+            hold_action:
+              action: none
+            type: image
+
+          - action: none
+            entity: person.leo
+            state_image:
+              home: /local/ui/person/在家.png
+              not_home: /local/ui/person/不在家.png
+            style:
+              background-color: rgba(255, 255, 255, 0.0)
+              border-radius: 55%
+              height: 9.8%
+              left: 5.45%
+              top: 91.9%
+              width: 5.8%
+            tap_action: none
+            type: image
+          - action: none
+            entity: person.amy
+            state_image:
+              home: /local/ui/person/在家_amy.png
+              not_home: /local/ui/person/不在家_amy.png
+            style:
+              background-color: rgba(255, 255, 255, 0.0)
+              border-radius: 55%
+              border-width: 20%
+              border-color: rgb(138, 138, 138)
+              height: 9.8%
+              left: 12.45%
+              top: 91.9%
+              width: 5.8%
+            tap_action: none
+            type: image
+          - color_thresholds:
+              - color: '#4dd2ff'
+                value: 17
+              - color: '#01a4db'
+                value: 20
+              - color: '#fccd68'
+                value: 23
+              - color: '#fd8524'
+                value: 26
+              - color: '#ff1a1a'
+                value: 30
+            entities:
+              - sensor.living_binary_temperature
+              - sensor.airhumidifier_temperature
+            icon: mdi:home-thermometer-outline
+            update_interval: 600
+            show:
+              icon: true
+              legend: false
+              name: false
+            style: |
+              :host {
+               left: 8.6%;
+               top:  74%;
+               width: 17.5%;
+               overflow: hidden;
+               height: 15%;
+               background: none  !important;
+               box-shadow: none !important;
+              }
+              .header {
+               font-size: 10%;
+               position: absolute !important;
+               width: 5% !important;
+               padding: 0 !important;
+               right: 20% !important;
+               top: 15% !important;
+              }
+              ha-card {
+               background: none  !important;
+               padding: 0 !important;
+              }
+              .icon > ha-icon {
+               width:10% !important;
+               height:10% !important;
+              }
+              .state__time{
+               font-size:0.9vw !important;
+               margin-top: 0.2vw;
+               font-weight: 300 !important;
+               opacity: 0.4 !important;
+              }
+              .states {
+               font-size: 100% !important;
+               padding: 1vw 0vw 0vw 0vw  !important;
+               margin: auto !important;
+               width: 68%;
+              }
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/weather
+            type: custom:mini-graph-card
+          - backdrop: false
+            entity: weather.adelaide
+            name: ' '
+            style: |
+              :host {
+              left: 8.4%;
+              top:  20.5%;
+              width: 13%;
+              height: 6% !important;
+              overflow: hidden;
+              height: 11%;
+              background: none  !important;
+              box-shadow: none !important;
+              font-size: 100% !important;
+              }
+              ha-card {
+              background: none  !important;
+              box-shadow: none !important;
+              flex-flow: row-reverse !important;
+              padding: 0 !important;
+              }
+              .weather__info--add{
+              display : none !important;
+              }
+              .weather__info{
+              flex-grow: 1;
+              min-height: 0 !important;
+              height: 5%;
+              margin-left: 2%;
+              }
+              .weather__icon{
+              margin-right:0.5% !important;
+              margin-top: -3%;
+              width: 2vw !important;
+              height: 2vw !important;
+              flex: 0 0 2vw !important;
+              }
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/weather
+            type: custom:simple-weather-card
+          - entity: sensor.time
+            hold_action:
+              action: none
+            style:
+              color: rgba(255, 255, 255, 0.7)
+              font-size: 400%
+              font-weight: 400
+              left: 1.5%
+              letter-spacing: '-0.05vw'
+              max-width: 1px
+              top: 8%
+            tap_action:
+              action: none
+            type: state-label
+          - entity: sensor.date_string
+            hold_action:
+              action: none
+            style:
+              color: rgba(255, 255, 255, 0.3)
+              font-size: 1.3vw
+              font-weight: 300
+              left: 16.9%
+              letter-spacing: 0.05vw
+              text-align: left
+              top: 14%
+              width: 30%
+            tap_action:
+              action: none
+            type: state-label
+    #############################################################################################################################################
+    #                                                                                                                                           #
+    #                                                               天气预报                                                                     #
+    #                                                                                                                                           #
+    #############################################################################################################################################
+
+  - theme: Backend-selected
+    title: 天气预报
+    path: weather
+    icon: mdi:weather-cloudy
+    type: panel
+    badges: []
+    cards:
+      - type: picture-elements
+        image: /local/ui/天气预报.png
+        elements:
+
+          - current: true
+            details: true
+            entity: weather.adelaide
+            forecast: true
+            name: 天气预报
+            style: |
+              :host {
+                left: 58.5%;
+                top:  38%;
+                width: 77%;
+                overflow: hidden;
+                height: 63%;
+                background: none !important;
+                box-shadow: none !important;
+              }
+              .current {
+                margin-bottom: 7vw;
+              }
+              .variations {
+                margin-bottom: 4vw;
+              }
+              ha-card {
+                height: 100%;
+                background: none  !important;
+                box-shadow: none !important;
+                border-radius: 1vw;
+                font-size: 1.2vw !important;
+              }
+              .forecast{
+                padding: 0 2.5%;
+                width: 95%;
+              }
+              .forecast .day:first-child{
+                border-left: 0.1em solid #d9d9d9;
+              }
+              .forecast .day:last-child{
+                border-right: 0.1em solid #d9d9d9;
+              }
+            type: 'custom:weather-card'
+
+
+    #############################################################################################################################################
+    #                                                                                                                                           #
+    #                                                               天气预报-侧边栏元素                                                            #
+    #                                                                                                                                           #
+    #############################################################################################################################################
+
+          - action: none
+            image: /local/ui/按钮/家庭总览_bt_off.png
+            style:
+              left: 8.8%
+              top: 30.6%
+              width: 14.9%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/plan
+            hold_action:
+              action: none
+            type: image
+          - action: none
+            image: /local/ui/按钮/灯光控制_bt_off.png
+            style:
+              left: 8.8%
+              top: 37.6%
+              width: 14.9%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/light
+            hold_action:
+              action: none
+            type: image
+          - action: none
+            image: /local/ui/按钮/扫地机_bt_off.png
+            style:
+              left: 8.8%
+              top: 44.6%
+              width: 14.9%
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/robot
+            hold_action:
+              action: none
+            type: image
+
+
+          - action: none
+            entity: person.leo
+            state_image:
+              home: /local/ui/person/在家.png
+              not_home: /local/ui/person/不在家.png
+            style:
+              background-color: rgba(255, 255, 255, 0.0)
+              border-radius: 55%
+              height: 9.8%
+              left: 5.45%
+              top: 91.9%
+              width: 5.8%
+            tap_action: none
+            type: image
+          - action: none
+            entity: person.amy
+            state_image:
+              home: /local/ui/person/在家_amy.png
+              not_home: /local/ui/person/不在家_amy.png
+            style:
+              background-color: rgba(255, 255, 255, 0.0)
+              border-radius: 55%
+              border-width: 20%
+              border-color: rgb(138, 138, 138)
+              height: 9.8%
+              left: 12.45%
+              top: 91.9%
+              width: 5.8%
+            tap_action: none
+            type: image
+          - color_thresholds:
+              - color: '#4dd2ff'
+                value: 17
+              - color: '#01a4db'
+                value: 20
+              - color: '#fccd68'
+                value: 23
+              - color: '#fd8524'
+                value: 26
+              - color: '#ff1a1a'
+                value: 30
+            entities:
+              - sensor.living_binary_temperature
+              - sensor.airhumidifier_temperature
+            icon: mdi:home-thermometer-outline
+            update_interval: 600
+            show:
+              icon: true
+              legend: false
+              name: false
+            style: |
+              :host {
+               left: 8.6%;
+               top:  74%;
+               width: 17.5%;
+               overflow: hidden;
+               height: 15%;
+               background: none  !important;
+               box-shadow: none !important;
+              }
+              .header {
+               font-size: 10%;
+               position: absolute !important;
+               width: 5% !important;
+               padding: 0 !important;
+               right: 20% !important;
+               top: 15% !important;
+              }
+              ha-card {
+               background: none  !important;
+               padding: 0 !important;
+              }
+              .icon > ha-icon {
+               width:10% !important;
+               height:10% !important;
+              }
+              .state__time{
+               font-size:0.9vw !important;
+               margin-top: 0.2vw;
+               font-weight: 300 !important;
+               opacity: 0.4 !important;
+              }
+              .states {
+               font-size: 100% !important;
+               padding: 1vw 0vw 0vw 0vw  !important;
+               margin: auto !important;
+               width: 68%;
+              }
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/weather
+            type: custom:mini-graph-card
+          - backdrop: false
+            entity: weather.adelaide
+            name: ' '
+            style: |
+              :host {
+              left: 8.4%;
+              top:  20.5%;
+              width: 13%;
+              height: 6% !important;
+              overflow: hidden;
+              height: 11%;
+              background: none  !important;
+              box-shadow: none !important;
+              font-size: 100% !important;
+              }
+              ha-card {
+              background: none  !important;
+              box-shadow: none !important;
+              flex-flow: row-reverse !important;
+              padding: 0 !important;
+              }
+              .weather__info--add{
+              display : none !important;
+              }
+              .weather__info{
+              flex-grow: 1;
+              min-height: 0 !important;
+              height: 5%;
+              margin-left: 2%;
+              }
+              .weather__icon{
+              margin-right:0.5% !important;
+              margin-top: -3%;
+              width: 2vw !important;
+              height: 2vw !important;
+              flex: 0 0 2vw !important;
+              }
+            tap_action:
+              action: navigate
+              navigation_path: /lovelace-floor/weather
+            type: custom:simple-weather-card
+          - entity: sensor.time
+            hold_action:
+              action: none
+            style:
+              color: rgba(255, 255, 255, 0.7)
+              font-size: 400%
+              font-weight: 400
+              left: 1.5%
+              letter-spacing: '-0.05vw'
+              max-width: 1px
+              top: 8%
+            tap_action:
+              action: none
+            type: state-label
+          - entity: sensor.date_string
+            hold_action:
+              action: none
+            style:
+              color: rgba(255, 255, 255, 0.3)
+              font-size: 1.3vw
+              font-weight: 300
+              left: 16.9%
+              letter-spacing: 0.05vw
+              text-align: left
+              top: 14%
+              width: 30%
+            tap_action:
+              action: none
+            type: state-label
+ 
