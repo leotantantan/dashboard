@@ -20,3 +20,26 @@ sensor:
         value_template: "{{ states('sensor.day') }} ,  {{ states('sensor.month') }}日"
 
  
+camera:
+  - platform: xiaomi_cloud_map_extractor
+    host: 192.168.50.230
+    token: !secret roborock_token
+    username: !secret xiaomi_id
+    password: !secret xiaomi_pw
+    country: "cn"
+    draw: ["all"]
+    colors:
+      color_map_inside: [43, 47, 48]
+      color_map_outside: [32, 36, 37]
+      color_map_wall: [100, 196, 254]
+      color_grey_wall: [216, 5, 69]
+      color_path: [30, 80, 113]
+      color_virtual_walls: [100, 196, 254]
+      color_charger: [244, 103, 15]
+      color_robo: [244, 244, 144]
+      color_unknown: [0, 0, 0]
+    map_transformation:
+      rotate: 270
+
+    attributes:
+      - calibration_points
