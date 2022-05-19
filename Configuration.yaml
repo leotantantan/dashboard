@@ -1,5 +1,6 @@
 #不要直接替换整个文件, 只是添加下面的部分到你们的Configuration.yaml文件里面的sensor下面, 如果你们已经有sensor的类别请把下面的sensor删掉
 sensor:
+#下面这个是时间, 添加了才能用time_date这个类型
   - platform: time_date
     display_options:
       - 'time'
@@ -10,6 +11,7 @@ sensor:
       - 'time_date'
       - 'time_utc'
       - 'beat'
+#下面这个是日期的英文转中文设置, 添加了才能用date_string这个类型
   - platform: template
     sensors:
       day:
