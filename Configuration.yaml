@@ -1,5 +1,15 @@
 #不要直接替换整个文件, 只是添加下面的部分到你们的Configuration.yaml文件里面的sensor下面, 如果你们已经有sensor的类别请把下面的sensor删掉
 sensor:
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'date_time_utc'
+      - 'date_time_iso'
+      - 'time_date'
+      - 'time_utc'
+      - 'beat'
   - platform: template
     sensors:
       day:
@@ -19,7 +29,7 @@ sensor:
         friendly_name: "Full Date"
         value_template: "{{ states('sensor.day') }} ,  {{ states('sensor.month') }}日"
 
- 
+ #这个也是和上面同理, 复制到Configuration.yaml里面的 camera 下面, 如果你们已经有camera的类别请把下面的camera删掉
 camera:
   - platform: xiaomi_cloud_map_extractor
     host: 192.168.50.230
